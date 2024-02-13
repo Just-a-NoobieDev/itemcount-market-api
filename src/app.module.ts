@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { GoogleStrategy } from './auth/utils/google.strategy';
+import { FacebookStrategy } from './auth/utils/facebook.strategy';
 
 @Module({
   imports: [
@@ -15,6 +16,6 @@ import { GoogleStrategy } from './auth/utils/google.strategy';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService, GoogleStrategy],
+  providers: [AppService, GoogleStrategy, FacebookStrategy],
 })
 export class AppModule {}
